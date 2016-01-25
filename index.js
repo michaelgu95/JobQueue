@@ -1,48 +1,53 @@
-var kue = require('kue');
-var http = require('http');
-var express = require('express');
+var kue = require('kue'),
+	queue = kue.createQueue();
+var express = require('express'),
+	app = express();
+var redis = require('redis'),
+	client = redis.createClient();
 var request = require('request');
-var redis = require('redis');
-var client = redis.createClient();
-var app = express();
-var queue = kue.createQueue();
 
+var port = process.env.PORT || 3000;
+
+app.listen(port, function(err) {
+   if(err) throw err;        
+   console.log('Express server running on localhost:%d', port);
+});
 
 app.get('/', function(req, res){
 	//if user GETs with an id
-	if(req.id){
+	if(req.param('id')){
+		var id = req.param('id');
+		console.log('User requests data with id: ' + id);
 		//if the job was completed
-		if(responses.indexOf(req.id) > -1){
-			client.hget("jobs", job.id, function(err, value){
+			client.hget("jobs", id, function(err, value){
 				if(err){
-					console.log(err);
+					res.send(err);
 				}else{
-					console.log("job complete with value: " + value);
+					console.log("Job complete with value:" + value);
+					res.send(value);
 				}
 			})
-		}
-	//otherwise, create new job and return job.id
+		
+	//otherwise, create new job
 	}else{
-		var id = newJob();
-		res.send(id);
+		newJob(res);
 	}
 })
 
-var responses = [];
-
-function newJob(){
+function newJob(res){
 	var job = queue.create('new_job');
-
 	job.on('complete', function(){
 		console.log('Job', job.id, 'has finished');
-		responses.push(job.id);
+
+		//send id as result
+		res.setHeader('Content-Type', 'application/json');
+		res.send(JSON.stringify(job.id));
 	})
 	.on('failed', function(){
 		console.log('Job', job.id, 'has failed');
 	});
 
 	job.save();
-	return job.id;
 }
 
 queue.process('new_job', function (job, done){
@@ -55,7 +60,3 @@ queue.process('new_job', function (job, done){
 		}
 	})
 })
-
-// setInterval(function(){
-// 	newJob();
-// }, 3000);
