@@ -29,13 +29,15 @@ app.get('/', function(req, res){
 			})
 		
 	//otherwise, create new job
-	}else{
-		newJob(res);
+	}else if(req.param('url')){
+		newJob(res, req.param('url'));
 	}
 })
 
-function newJob(res){
-	var job = queue.create('new_job');
+function newJob(res, url){
+	var job = queue.create('new_job', {
+		url: url
+	});
 	job.on('complete', function(){
 		console.log('Job', job.id, 'has finished');
 
@@ -51,7 +53,8 @@ function newJob(res){
 }
 
 queue.process('new_job', function (job, done){
-	request("http://www.google.com/", function(error, response, body){
+	var url = job.data.url.replace( /['"]/g, "" );
+	request(url, function(error, response, body){
 		if(!error){
 			client.hset("jobs", job.id, body);
 			done();
