@@ -18,15 +18,18 @@ app.get('/', function(req, res){
 	if(req.param('id')){
 		var id = req.param('id');
 		console.log('User requests data with id: ' + id);
-		//if the job was completed
-			client.hget("jobs", id, function(err, value){
-				if(err){
-					res.send(err);
-				}else{
-					console.log("Job complete with value:" + value);
-					res.send(value);
-				}
-			})
+		//get html stored in redis for the id
+		client.hget("jobs", id, function(err, value){
+			if(err){
+				res.send(err);
+			}else if(value == null){
+				res.send('No value stored for id: ' + id + '\n');
+				console.log('User requests invalid id');
+			}else{
+				res.send(value);
+				console.log("Job complete with value:" + value);
+			}
+		})
 		
 	//otherwise, create new job
 	}else if(req.param('url')){
