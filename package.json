@@ -1,0 +1,12 @@
+{
+  "name": "MediumJobQueue",
+  "author": {
+    "name": "Michael Gu"
+  },
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "^4.13.4",
+    "kue": "~0.6.2"
+  },
+  "devDependencies": {}
+}
