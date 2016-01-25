@@ -56,6 +56,6 @@ queue.process('new_job', function (job, done){
 	})
 })
 
-setInterval(function(){
-	newJob();
-}, 3000);
+// setInterval(function(){
+// 	newJob();
+// }, 3000);
