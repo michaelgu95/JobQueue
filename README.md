@@ -1,5 +1,5 @@
 # JobQueue
-Job Queue that fetches HTML requests from http://google.com/
+Job Queue that fetches HTML requests from a specified url
 
 ##Fire it up
 1. Install packages: $ npm install
