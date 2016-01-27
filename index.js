@@ -7,6 +7,7 @@ var redis = require('redis'),
 var request = require('request');
 
 var port = process.env.PORT || 3000;
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
 app.listen(port, function(err) {
    if(err) throw err;        
@@ -46,7 +47,7 @@ function newJob(res, url){
 
 		//send id as result
 		res.setHeader('Content-Type', 'application/json');
-		res.send(JSON.stringify(job.id));
+		res.send('Your job id: ' + job.id + '\n');
 	})
 	.on('failed', function(){
 		console.log('Job', job.id, 'has failed');
