@@ -58,7 +58,10 @@ function newJob(res, url){
 
 queue.process('new_job', function (job, done){
 	var url = job.data.url.replace( /['"]/g, "" );
-	request(url, function(error, response, body){
+	request({
+		url: url,
+		timeout: 1000 	//add timeout in case file too large
+	}, function(error, response, body){
 		if(!error){
 			client.hset("jobs", job.id, body);
 			done();
