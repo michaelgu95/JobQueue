@@ -8,5 +8,8 @@
     "express": "^4.13.4",
     "kue": "~0.6.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-http": "^1.0.0"
+  }
 }

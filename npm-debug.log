@@ -1,93 +1,709 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'redis_client' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', 'chai' ]
 2 info using npm@2.11.3
 3 info using node@v0.12.7
 4 verbose install initial load of /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/package.json
-5 warn package.json MediumJobQueue@0.1.0 No description
-6 warn package.json MediumJobQueue@0.1.0 No repository field.
-7 warn package.json MediumJobQueue@0.1.0 No README data
-8 warn package.json MediumJobQueue@0.1.0 No license field.
-9 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/express/package.json
-10 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/kue/package.json
-11 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/redis/package.json
-12 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/request/package.json
-13 info package.json kue@0.6.2 No license field.
-14 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/package.json
-15 silly cache add args [ 'redis_client', null ]
-16 verbose cache add spec redis_client
-17 silly cache add parsed spec { raw: 'redis_client',
-17 silly cache add   scope: null,
-17 silly cache add   name: 'redis_client',
-17 silly cache add   rawSpec: '',
-17 silly cache add   spec: '*',
-17 silly cache add   type: 'range' }
-18 silly addNamed redis_client@*
-19 verbose addNamed "*" is a valid semver range for redis_client
-20 silly addNameRange { name: 'redis_client', range: '*', hasData: false }
-21 silly mapToRegistry name redis_client
-22 silly mapToRegistry using default registry
-23 silly mapToRegistry registry https://registry.npmjs.org/
-24 silly mapToRegistry uri https://registry.npmjs.org/redis_client
-25 verbose addNameRange registry:https://registry.npmjs.org/redis_client not in flight; fetching
-26 verbose request uri https://registry.npmjs.org/redis_client
-27 verbose request no auth needed
-28 info attempt registry request try #1 at 10:17:50 AM
-29 verbose request id 256be33ec8f91ccb
-30 http request GET https://registry.npmjs.org/redis_client
-31 http 404 https://registry.npmjs.org/redis_client
-32 verbose headers { 'content-type': 'application/json',
-32 verbose headers   'cache-control': 'max-age=0',
-32 verbose headers   'content-length': '2',
-32 verbose headers   'accept-ranges': 'bytes',
-32 verbose headers   date: 'Mon, 25 Jan 2016 15:17:50 GMT',
-32 verbose headers   via: '1.1 varnish',
-32 verbose headers   age: '0',
-32 verbose headers   connection: 'keep-alive',
-32 verbose headers   'x-served-by': 'cache-dfw1827-DFW',
-32 verbose headers   'x-cache': 'MISS',
-32 verbose headers   'x-cache-hits': '0',
-32 verbose headers   'x-timer': 'S1453735070.819989,VS0,VE51' }
-33 silly get cb [ 404,
-33 silly get   { 'content-type': 'application/json',
-33 silly get     'cache-control': 'max-age=0',
-33 silly get     'content-length': '2',
-33 silly get     'accept-ranges': 'bytes',
-33 silly get     date: 'Mon, 25 Jan 2016 15:17:50 GMT',
-33 silly get     via: '1.1 varnish',
-33 silly get     age: '0',
-33 silly get     connection: 'keep-alive',
-33 silly get     'x-served-by': 'cache-dfw1827-DFW',
-33 silly get     'x-cache': 'MISS',
-33 silly get     'x-cache-hits': '0',
-33 silly get     'x-timer': 'S1453735070.819989,VS0,VE51' } ]
-34 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/redis_client
-34 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:239:14)
-34 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
-34 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:354:22)
-34 verbose stack     at Request.emit (events.js:110:17)
-34 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1207:14)
-34 verbose stack     at Request.emit (events.js:129:20)
-34 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1153:12)
-34 verbose stack     at IncomingMessage.emit (events.js:129:20)
-34 verbose stack     at _stream_readable.js:908:16
-34 verbose stack     at process._tickCallback (node.js:355:11)
-35 verbose statusCode 404
-36 verbose pkgid redis_client
-37 verbose cwd /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
-38 error Darwin 15.2.0
-39 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "redis_client"
-40 error node v0.12.7
-41 error npm  v2.11.3
-42 error code E404
-43 error 404 Registry returned 404 for GET on https://registry.npmjs.org/redis_client
-43 error 404
-43 error 404 'redis_client' is not in the npm registry.
-43 error 404 You should bug the author to publish it (or use the name yourself!)
-43 error 404 It was specified as a dependency of 'MediumJobQueue'
-43 error 404
-43 error 404 Note that you can also install from a
-43 error 404 tarball, folder, http url, or git url.
-44 verbose exit [ 1, true ]
+5 warn package.json JobQueue@0.1.0 No repository field.
+6 warn package.json JobQueue@0.1.0 No license field.
+7 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/package.json
+8 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-http/package.json
+9 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-json-schema/package.json
+10 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/express/package.json
+11 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/kue/package.json
+12 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/mocha/package.json
+13 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/redis/package.json
+14 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/request/package.json
+15 info package.json chai-json-schema@1.2.0 No license field.
+16 info package.json chai-http@1.0.0 No license field.
+17 info package.json kue@0.6.2 No license field.
+18 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/package.json
+19 verbose install chai is installed as 3.4.1
+20 silly cache add args [ 'chai', null ]
+21 verbose cache add spec chai
+22 silly cache add parsed spec { raw: 'chai',
+22 silly cache add   scope: null,
+22 silly cache add   name: 'chai',
+22 silly cache add   rawSpec: '',
+22 silly cache add   spec: '*',
+22 silly cache add   type: 'range' }
+23 silly addNamed chai@*
+24 verbose addNamed "*" is a valid semver range for chai
+25 silly addNameRange { name: 'chai', range: '*', hasData: false }
+26 silly mapToRegistry name chai
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry uri https://registry.npmjs.org/chai
+30 verbose addNameRange registry:https://registry.npmjs.org/chai not in flight; fetching
+31 verbose request uri https://registry.npmjs.org/chai
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 11:27:19 PM
+34 verbose request id a2ff772d4af6276d
+35 verbose etag "82528WAL6996CZ75KAK07USWZ"
+36 http request GET https://registry.npmjs.org/chai
+37 http 304 https://registry.npmjs.org/chai
+38 silly get cb [ 304,
+38 silly get   { date: 'Thu, 28 Jan 2016 04:27:20 GMT',
+38 silly get     via: '1.1 varnish',
+38 silly get     'cache-control': 'max-age=300',
+38 silly get     etag: '"82528WAL6996CZ75KAK07USWZ"',
+38 silly get     age: '0',
+38 silly get     connection: 'keep-alive',
+38 silly get     'x-served-by': 'cache-dfw1834-DFW',
+38 silly get     'x-cache': 'HIT',
+38 silly get     'x-cache-hits': '1',
+38 silly get     'x-timer': 'S1453955240.241056,VS0,VE66',
+38 silly get     vary: 'Accept' } ]
+39 verbose etag https://registry.npmjs.org/chai from cache
+40 verbose get saving chai to /Users/michaelgu/.npm/registry.npmjs.org/chai/.cache.json
+41 silly addNameRange number 2 { name: 'chai', range: '*', hasData: true }
+42 silly addNameRange versions [ 'chai',
+42 silly addNameRange   [ '0.0.1',
+42 silly addNameRange     '0.0.2',
+42 silly addNameRange     '0.1.0',
+42 silly addNameRange     '0.1.1',
+42 silly addNameRange     '0.1.2',
+42 silly addNameRange     '0.1.3',
+42 silly addNameRange     '0.1.4',
+42 silly addNameRange     '0.1.5',
+42 silly addNameRange     '0.1.6',
+42 silly addNameRange     '0.1.7',
+42 silly addNameRange     '0.2.0',
+42 silly addNameRange     '0.2.1',
+42 silly addNameRange     '0.2.2',
+42 silly addNameRange     '0.2.3',
+42 silly addNameRange     '0.2.4',
+42 silly addNameRange     '0.3.0',
+42 silly addNameRange     '0.3.1',
+42 silly addNameRange     '0.3.2',
+42 silly addNameRange     '0.3.3',
+42 silly addNameRange     '0.3.4',
+42 silly addNameRange     '0.4.0',
+42 silly addNameRange     '0.4.1',
+42 silly addNameRange     '0.4.2',
+42 silly addNameRange     '0.5.0',
+42 silly addNameRange     '0.5.1',
+42 silly addNameRange     '0.5.2',
+42 silly addNameRange     '0.5.3',
+42 silly addNameRange     '1.0.0',
+42 silly addNameRange     '1.0.1',
+42 silly addNameRange     '1.0.2',
+42 silly addNameRange     '1.0.3',
+42 silly addNameRange     '1.0.4',
+42 silly addNameRange     '1.1.0',
+42 silly addNameRange     '1.1.1',
+42 silly addNameRange     '1.2.0',
+42 silly addNameRange     '1.3.0',
+42 silly addNameRange     '1.4.0',
+42 silly addNameRange     '1.4.1',
+42 silly addNameRange     '1.4.2',
+42 silly addNameRange     '1.5.0',
+42 silly addNameRange     '1.6.0',
+42 silly addNameRange     '1.6.1',
+42 silly addNameRange     '1.7.0',
+42 silly addNameRange     '1.7.1',
+42 silly addNameRange     '1.7.2',
+42 silly addNameRange     '1.8.0',
+42 silly addNameRange     '1.8.1',
+42 silly addNameRange     '1.9.0',
+42 silly addNameRange     '1.9.1',
+42 silly addNameRange     '1.9.2',
+42 silly addNameRange     '1.10.0',
+42 silly addNameRange     '2.0.0',
+42 silly addNameRange     '2.1.0',
+42 silly addNameRange     '2.1.1',
+42 silly addNameRange     '2.1.2',
+42 silly addNameRange     '2.2.0',
+42 silly addNameRange     '2.3.0',
+42 silly addNameRange     '3.0.0',
+42 silly addNameRange     '3.1.0',
+42 silly addNameRange     '3.2.0',
+42 silly addNameRange     '3.3.0',
+42 silly addNameRange     '3.4.0',
+42 silly addNameRange     '3.4.1' ] ]
+43 silly addNamed chai@3.4.1
+44 verbose addNamed "3.4.1" is a plain semver version for chai
+45 silly cache afterAdd chai@3.4.1
+46 verbose afterAdd /Users/michaelgu/.npm/chai/3.4.1/package/package.json not in flight; writing
+47 verbose afterAdd /Users/michaelgu/.npm/chai/3.4.1/package/package.json written
+48 silly install resolved [ { author: { name: 'Jake Luer', email: 'jake@alogicalparadox.com' },
+48 silly install resolved     name: 'chai',
+48 silly install resolved     description: 'BDD/TDD assertion library for node.js and the browser. Test framework agnostic.',
+48 silly install resolved     keywords: [ 'test', 'assertion', 'assert', 'testing', 'chai' ],
+48 silly install resolved     homepage: 'http://chaijs.com',
+48 silly install resolved     license: 'MIT',
+48 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+48 silly install resolved     version: '3.4.1',
+48 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/chaijs/chai.git' },
+48 silly install resolved     bugs: { url: 'https://github.com/chaijs/chai/issues' },
+48 silly install resolved     main: './index',
+48 silly install resolved     scripts: { test: 'make test' },
+48 silly install resolved     engines: { node: '>= 0.4.0' },
+48 silly install resolved     dependencies:
+48 silly install resolved      { 'assertion-error': '^1.0.1',
+48 silly install resolved        'deep-eql': '^0.1.3',
+48 silly install resolved        'type-detect': '^1.0.0' },
+48 silly install resolved     devDependencies:
+48 silly install resolved      { browserify: '^10.2.1',
+48 silly install resolved        'bump-cli': '^1.1.3',
+48 silly install resolved        karma: '^0.12.0',
+48 silly install resolved        'karma-mocha': '^0.1.10',
+48 silly install resolved        'karma-sauce-launcher': '^0.2.11',
+48 silly install resolved        'karma-phantomjs-launcher': '^0.2.0',
+48 silly install resolved        'karma-firefox-launcher': '^0.1.6',
+48 silly install resolved        mocha: '^2.2.5',
+48 silly install resolved        istanbul: '^0.3.14' },
+48 silly install resolved     gitHead: '5def52c217fa4fa90c0507dfe1d0000268908f1c',
+48 silly install resolved     _id: 'chai@3.4.1',
+48 silly install resolved     _shasum: '330ae2f819124c26182036fa5e43a88ea4e1bd85',
+48 silly install resolved     _from: 'chai@*',
+48 silly install resolved     _npmVersion: '3.3.8',
+48 silly install resolved     _nodeVersion: '4.1.2',
+48 silly install resolved     _npmUser: { name: 'chaijs', email: 'chaijs@keithcirkel.co.uk' },
+48 silly install resolved     dist:
+48 silly install resolved      { shasum: '330ae2f819124c26182036fa5e43a88ea4e1bd85',
+48 silly install resolved        tarball: 'http://registry.npmjs.org/chai/-/chai-3.4.1.tgz' },
+48 silly install resolved     maintainers: [ [Object], [Object] ],
+48 silly install resolved     directories: {},
+48 silly install resolved     _resolved: 'https://registry.npmjs.org/chai/-/chai-3.4.1.tgz',
+48 silly install resolved     readme: 'ERROR: No README data found!' } ]
+49 info install chai@3.4.1 into /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+50 info installOne chai@3.4.1
+51 verbose installOne of chai to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue not in flight; installing
+52 verbose lock using /Users/michaelgu/.npm/_locks/chai-e1a17cb213bc6cf5.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+53 silly install write writing chai 3.4.1 to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+54 verbose unbuild node_modules/chai
+55 info preuninstall chai@3.4.1
+56 info uninstall chai@3.4.1
+57 verbose unbuild rmStuff chai@3.4.1 from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules
+58 info postuninstall chai@3.4.1
+59 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai is being purged from base /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+60 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+61 silly vacuum-fs purging /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+62 silly vacuum-fs quitting because other entries in /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules
+63 verbose tar unpack /Users/michaelgu/.npm/chai/3.4.1/package.tgz
+64 verbose tar unpacking to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+65 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai is being purged
+66 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+67 silly gunzTarPerm modes [ '755', '644' ]
+68 silly gunzTarPerm extractEntry package.json
+69 silly gunzTarPerm extractEntry .npmignore
+70 silly gunzTarPerm extractEntry README.md
+71 silly gunzTarPerm extractEntry chai.js
+72 silly gunzTarPerm extractEntry index.js
+73 silly gunzTarPerm extractEntry karma.conf.js
+74 silly gunzTarPerm extractEntry karma.sauce.js
+75 silly gunzTarPerm extractEntry sauce.browsers.js
+76 silly gunzTarPerm extractEntry ReleaseNotes.md
+77 silly gunzTarPerm extractEntry bower.json
+78 silly gunzTarPerm extractEntry CONTRIBUTING.md
+79 silly gunzTarPerm extractEntry History.md
+80 silly gunzTarPerm extractEntry lib/chai.js
+81 silly gunzTarPerm extractEntry lib/chai/assertion.js
+82 silly gunzTarPerm extractEntry lib/chai/config.js
+83 silly gunzTarPerm extractEntry lib/chai/core/assertions.js
+84 silly gunzTarPerm extractEntry lib/chai/interface/assert.js
+85 silly gunzTarPerm extractEntry lib/chai/interface/expect.js
+86 silly gunzTarPerm extractEntry lib/chai/interface/should.js
+87 silly gunzTarPerm extractEntry lib/chai/utils/addChainableMethod.js
+88 silly gunzTarPerm extractEntry lib/chai/utils/getMessage.js
+89 silly gunzTarPerm extractEntry lib/chai/utils/getName.js
+90 silly gunzTarPerm extractEntry lib/chai/utils/getPathInfo.js
+91 silly gunzTarPerm extractEntry lib/chai/utils/getEnumerableProperties.js
+92 silly gunzTarPerm extractEntry lib/chai/utils/getProperties.js
+93 silly gunzTarPerm extractEntry lib/chai/utils/hasProperty.js
+94 silly gunzTarPerm extractEntry lib/chai/utils/index.js
+95 silly gunzTarPerm extractEntry lib/chai/utils/inspect.js
+96 silly gunzTarPerm extractEntry lib/chai/utils/objDisplay.js
+97 silly gunzTarPerm extractEntry lib/chai/utils/getActual.js
+98 silly gunzTarPerm extractEntry lib/chai/utils/overwriteChainableMethod.js
+99 silly gunzTarPerm extractEntry lib/chai/utils/flag.js
+100 silly gunzTarPerm extractEntry lib/chai/utils/overwriteMethod.js
+101 silly gunzTarPerm extractEntry lib/chai/utils/expectTypes.js
+102 silly gunzTarPerm extractEntry lib/chai/utils/overwriteProperty.js
+103 silly gunzTarPerm extractEntry lib/chai/utils/addProperty.js
+104 silly gunzTarPerm extractEntry lib/chai/utils/test.js
+105 silly gunzTarPerm extractEntry lib/chai/utils/addMethod.js
+106 silly gunzTarPerm extractEntry lib/chai/utils/transferFlags.js
+107 silly gunzTarPerm extractEntry lib/chai/utils/getPathValue.js
+108 verbose write writing to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/package.json
+109 info preinstall chai@3.4.1
+110 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/package.json
+111 silly prepareForInstallMany adding assertion-error@^1.0.1 from chai dependencies
+112 silly prepareForInstallMany adding deep-eql@^0.1.3 from chai dependencies
+113 silly prepareForInstallMany adding type-detect@^1.0.0 from chai dependencies
+114 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/package.json
+115 silly cache add args [ 'deep-eql@^0.1.3', null ]
+116 verbose cache add spec deep-eql@^0.1.3
+117 silly cache add parsed spec { raw: 'deep-eql@^0.1.3',
+117 silly cache add   scope: null,
+117 silly cache add   name: 'deep-eql',
+117 silly cache add   rawSpec: '^0.1.3',
+117 silly cache add   spec: '>=0.1.3 <0.2.0',
+117 silly cache add   type: 'range' }
+118 silly addNamed deep-eql@>=0.1.3 <0.2.0
+119 verbose addNamed ">=0.1.3 <0.2.0" is a valid semver range for deep-eql
+120 silly addNameRange { name: 'deep-eql', range: '>=0.1.3 <0.2.0', hasData: false }
+121 silly mapToRegistry name deep-eql
+122 silly mapToRegistry using default registry
+123 silly mapToRegistry registry https://registry.npmjs.org/
+124 silly mapToRegistry uri https://registry.npmjs.org/deep-eql
+125 verbose addNameRange registry:https://registry.npmjs.org/deep-eql not in flight; fetching
+126 silly cache add args [ 'type-detect@^1.0.0', null ]
+127 verbose cache add spec type-detect@^1.0.0
+128 silly cache add parsed spec { raw: 'type-detect@^1.0.0',
+128 silly cache add   scope: null,
+128 silly cache add   name: 'type-detect',
+128 silly cache add   rawSpec: '^1.0.0',
+128 silly cache add   spec: '>=1.0.0 <2.0.0',
+128 silly cache add   type: 'range' }
+129 silly addNamed type-detect@>=1.0.0 <2.0.0
+130 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for type-detect
+131 silly addNameRange { name: 'type-detect', range: '>=1.0.0 <2.0.0', hasData: false }
+132 silly mapToRegistry name type-detect
+133 silly mapToRegistry using default registry
+134 silly mapToRegistry registry https://registry.npmjs.org/
+135 silly mapToRegistry uri https://registry.npmjs.org/type-detect
+136 verbose addNameRange registry:https://registry.npmjs.org/type-detect not in flight; fetching
+137 silly cache add args [ 'assertion-error@^1.0.1', null ]
+138 verbose cache add spec assertion-error@^1.0.1
+139 silly cache add parsed spec { raw: 'assertion-error@^1.0.1',
+139 silly cache add   scope: null,
+139 silly cache add   name: 'assertion-error',
+139 silly cache add   rawSpec: '^1.0.1',
+139 silly cache add   spec: '>=1.0.1 <2.0.0',
+139 silly cache add   type: 'range' }
+140 silly addNamed assertion-error@>=1.0.1 <2.0.0
+141 verbose addNamed ">=1.0.1 <2.0.0" is a valid semver range for assertion-error
+142 silly addNameRange { name: 'assertion-error',
+142 silly addNameRange   range: '>=1.0.1 <2.0.0',
+142 silly addNameRange   hasData: false }
+143 silly mapToRegistry name assertion-error
+144 silly mapToRegistry using default registry
+145 silly mapToRegistry registry https://registry.npmjs.org/
+146 silly mapToRegistry uri https://registry.npmjs.org/assertion-error
+147 verbose addNameRange registry:https://registry.npmjs.org/assertion-error not in flight; fetching
+148 verbose request uri https://registry.npmjs.org/deep-eql
+149 verbose request no auth needed
+150 info attempt registry request try #1 at 11:27:20 PM
+151 verbose etag "4J4CQZCY7T9LYAX8QU0YTYBMA"
+152 http request GET https://registry.npmjs.org/deep-eql
+153 verbose request uri https://registry.npmjs.org/assertion-error
+154 verbose request no auth needed
+155 info attempt registry request try #1 at 11:27:20 PM
+156 verbose etag "24FGJ5E43YUU76OMKWEHAIZNF"
+157 http request GET https://registry.npmjs.org/assertion-error
+158 verbose request uri https://registry.npmjs.org/type-detect
+159 verbose request no auth needed
+160 info attempt registry request try #1 at 11:27:20 PM
+161 verbose etag "9DDN9OVCPG8TXADH24J312J20"
+162 http request GET https://registry.npmjs.org/type-detect
+163 http 304 https://registry.npmjs.org/type-detect
+164 silly get cb [ 304,
+164 silly get   { date: 'Thu, 28 Jan 2016 04:27:20 GMT',
+164 silly get     via: '1.1 varnish',
+164 silly get     'cache-control': 'max-age=300',
+164 silly get     etag: '"9DDN9OVCPG8TXADH24J312J20"',
+164 silly get     age: '236',
+164 silly get     connection: 'keep-alive',
+164 silly get     'x-served-by': 'cache-dfw1827-DFW',
+164 silly get     'x-cache': 'HIT',
+164 silly get     'x-cache-hits': '1',
+164 silly get     'x-timer': 'S1453955240.801899,VS0,VE0',
+164 silly get     vary: 'Accept' } ]
+165 verbose etag https://registry.npmjs.org/type-detect from cache
+166 verbose get saving type-detect to /Users/michaelgu/.npm/registry.npmjs.org/type-detect/.cache.json
+167 silly addNameRange number 2 { name: 'type-detect', range: '>=1.0.0 <2.0.0', hasData: true }
+168 silly addNameRange versions [ 'type-detect', [ '0.1.0', '0.1.1', '0.1.2', '1.0.0' ] ]
+169 silly addNamed type-detect@1.0.0
+170 verbose addNamed "1.0.0" is a plain semver version for type-detect
+171 silly cache afterAdd type-detect@1.0.0
+172 verbose afterAdd /Users/michaelgu/.npm/type-detect/1.0.0/package/package.json not in flight; writing
+173 verbose afterAdd /Users/michaelgu/.npm/type-detect/1.0.0/package/package.json written
+174 http 304 https://registry.npmjs.org/deep-eql
+175 silly get cb [ 304,
+175 silly get   { date: 'Thu, 28 Jan 2016 04:27:20 GMT',
+175 silly get     via: '1.1 varnish',
+175 silly get     'cache-control': 'max-age=300',
+175 silly get     etag: '"4J4CQZCY7T9LYAX8QU0YTYBMA"',
+175 silly get     age: '0',
+175 silly get     connection: 'keep-alive',
+175 silly get     'x-served-by': 'cache-dfw1820-DFW',
+175 silly get     'x-cache': 'HIT',
+175 silly get     'x-cache-hits': '1',
+175 silly get     'x-timer': 'S1453955240.789399,VS0,VE214',
+175 silly get     vary: 'Accept' } ]
+176 verbose etag https://registry.npmjs.org/deep-eql from cache
+177 verbose get saving deep-eql to /Users/michaelgu/.npm/registry.npmjs.org/deep-eql/.cache.json
+178 silly addNameRange number 2 { name: 'deep-eql', range: '>=0.1.3 <0.2.0', hasData: true }
+179 silly addNameRange versions [ 'deep-eql', [ '0.1.0', '0.1.1', '0.1.2', '0.1.3' ] ]
+180 silly addNamed deep-eql@0.1.3
+181 verbose addNamed "0.1.3" is a plain semver version for deep-eql
+182 silly cache afterAdd deep-eql@0.1.3
+183 verbose afterAdd /Users/michaelgu/.npm/deep-eql/0.1.3/package/package.json not in flight; writing
+184 verbose afterAdd /Users/michaelgu/.npm/deep-eql/0.1.3/package/package.json written
+185 http 304 https://registry.npmjs.org/assertion-error
+186 silly get cb [ 304,
+186 silly get   { date: 'Thu, 28 Jan 2016 04:27:20 GMT',
+186 silly get     via: '1.1 varnish',
+186 silly get     'cache-control': 'max-age=300',
+186 silly get     etag: '"24FGJ5E43YUU76OMKWEHAIZNF"',
+186 silly get     age: '0',
+186 silly get     connection: 'keep-alive',
+186 silly get     'x-served-by': 'cache-dfw1827-DFW',
+186 silly get     'x-cache': 'HIT',
+186 silly get     'x-cache-hits': '1',
+186 silly get     'x-timer': 'S1453955240.796814,VS0,VE274',
+186 silly get     vary: 'Accept' } ]
+187 verbose etag https://registry.npmjs.org/assertion-error from cache
+188 verbose get saving assertion-error to /Users/michaelgu/.npm/registry.npmjs.org/assertion-error/.cache.json
+189 silly addNameRange number 2 { name: 'assertion-error',
+189 silly addNameRange   range: '>=1.0.1 <2.0.0',
+189 silly addNameRange   hasData: true }
+190 silly addNameRange versions [ 'assertion-error', [ '0.1.0', '1.0.0', '1.0.1' ] ]
+191 silly addNamed assertion-error@1.0.1
+192 verbose addNamed "1.0.1" is a plain semver version for assertion-error
+193 silly cache afterAdd assertion-error@1.0.1
+194 verbose afterAdd /Users/michaelgu/.npm/assertion-error/1.0.1/package/package.json not in flight; writing
+195 verbose afterAdd /Users/michaelgu/.npm/assertion-error/1.0.1/package/package.json written
+196 silly install resolved [ { name: 'type-detect',
+196 silly install resolved     version: '1.0.0',
+196 silly install resolved     description: 'Improved typeof detection for node.js and the browser.',
+196 silly install resolved     author:
+196 silly install resolved      { name: 'Jake Luer',
+196 silly install resolved        email: 'jake@alogicalparadox.com',
+196 silly install resolved        url: 'http://alogicalparadox.com' },
+196 silly install resolved     license: 'MIT',
+196 silly install resolved     keywords: [],
+196 silly install resolved     repository:
+196 silly install resolved      { type: 'git',
+196 silly install resolved        url: 'git+ssh://git@github.com/chaijs/type-detect.git' },
+196 silly install resolved     engines: { node: '*' },
+196 silly install resolved     main: './index',
+196 silly install resolved     scripts: { test: 'make test' },
+196 silly install resolved     dependencies: {},
+196 silly install resolved     devDependencies:
+196 silly install resolved      { component: '*',
+196 silly install resolved        coveralls: '2.0.16',
+196 silly install resolved        jscoverage: '0.3.7',
+196 silly install resolved        mocha: '*',
+196 silly install resolved        'mocha-lcov-reporter': '0.0.1',
+196 silly install resolved        'mocha-phantomjs': '*',
+196 silly install resolved        'simple-assert': '*' },
+196 silly install resolved     gitHead: '3617862cbaa220d3700cfc9e96c6d3feb49e9587',
+196 silly install resolved     bugs: { url: 'https://github.com/chaijs/type-detect/issues' },
+196 silly install resolved     homepage: 'https://github.com/chaijs/type-detect',
+196 silly install resolved     _id: 'type-detect@1.0.0',
+196 silly install resolved     _shasum: '762217cc06db258ec48908a1298e8b95121e8ea2',
+196 silly install resolved     _from: 'type-detect@>=1.0.0 <2.0.0',
+196 silly install resolved     _npmVersion: '2.3.0',
+196 silly install resolved     _nodeVersion: '0.11.16',
+196 silly install resolved     _npmUser: { name: 'jakeluer', email: 'jake@alogicalparadox.com' },
+196 silly install resolved     maintainers: [ [Object] ],
+196 silly install resolved     dist:
+196 silly install resolved      { shasum: '762217cc06db258ec48908a1298e8b95121e8ea2',
+196 silly install resolved        tarball: 'http://registry.npmjs.org/type-detect/-/type-detect-1.0.0.tgz' },
+196 silly install resolved     directories: {},
+196 silly install resolved     _resolved: 'https://registry.npmjs.org/type-detect/-/type-detect-1.0.0.tgz',
+196 silly install resolved     readme: 'ERROR: No README data found!' },
+196 silly install resolved   { name: 'deep-eql',
+196 silly install resolved     version: '0.1.3',
+196 silly install resolved     description: 'Improved deep equality testing for Node.js and the browser.',
+196 silly install resolved     author: { name: 'Jake Luer', email: 'jake@alogicalparadox.com' },
+196 silly install resolved     license: 'MIT',
+196 silly install resolved     keywords: [ 'deep equal', 'object equal', 'testing', 'chai util' ],
+196 silly install resolved     repository:
+196 silly install resolved      { type: 'git',
+196 silly install resolved        url: 'git+ssh://git@github.com/chaijs/deep-eql.git' },
+196 silly install resolved     engines: { node: '*' },
+196 silly install resolved     main: './index',
+196 silly install resolved     scripts: { test: 'make test' },
+196 silly install resolved     dependencies: { 'type-detect': '0.1.1' },
+196 silly install resolved     devDependencies:
+196 silly install resolved      { component: '*',
+196 silly install resolved        coveralls: '2.0.16',
+196 silly install resolved        jscoverage: '0.3.7',
+196 silly install resolved        karma: '0.10.x',
+196 silly install resolved        'karma-mocha': '*',
+196 silly install resolved        mocha: '*',
+196 silly install resolved        'mocha-lcov-reporter': '0.0.1',
+196 silly install resolved        'simple-assert': '*' },
+196 silly install resolved     bugs: { url: 'https://github.com/chaijs/deep-eql/issues' },
+196 silly install resolved     _id: 'deep-eql@0.1.3',
+196 silly install resolved     dist:
+196 silly install resolved      { shasum: 'ef558acab8de25206cd713906d74e56930eb69f2',
+196 silly install resolved        tarball: 'http://registry.npmjs.org/deep-eql/-/deep-eql-0.1.3.tgz' },
+196 silly install resolved     _from: 'deep-eql@>=0.1.3 <0.2.0',
+196 silly install resolved     _npmVersion: '1.3.11',
+196 silly install resolved     _npmUser: { name: 'jakeluer', email: 'jake@alogicalparadox.com' },
+196 silly install resolved     maintainers: [ [Object] ],
+196 silly install resolved     directories: {},
+196 silly install resolved     _shasum: 'ef558acab8de25206cd713906d74e56930eb69f2',
+196 silly install resolved     _resolved: 'https://registry.npmjs.org/deep-eql/-/deep-eql-0.1.3.tgz',
+196 silly install resolved     readme: 'ERROR: No README data found!',
+196 silly install resolved     homepage: 'https://github.com/chaijs/deep-eql#readme' },
+196 silly install resolved   { name: 'assertion-error',
+196 silly install resolved     version: '1.0.1',
+196 silly install resolved     description: 'Error constructor for test and validation frameworks that implements standardized AssertionError specification.',
+196 silly install resolved     author:
+196 silly install resolved      { name: 'Jake Luer',
+196 silly install resolved        email: 'jake@qualiancy.com',
+196 silly install resolved        url: 'http://qualiancy.com' },
+196 silly install resolved     license: 'MIT',
+196 silly install resolved     keywords: [ 'test', 'assertion', 'assertion-error' ],
+196 silly install resolved     repository:
+196 silly install resolved      { type: 'git',
+196 silly install resolved        url: 'git+ssh://git@github.com/chaijs/assertion-error.git' },
+196 silly install resolved     engines: { node: '*' },
+196 silly install resolved     main: './index',
+196 silly install resolved     scripts: { test: 'make test' },
+196 silly install resolved     dependencies: {},
+196 silly install resolved     devDependencies: { component: '*' },
+196 silly install resolved     gitHead: 'db10d2fc753f00b3dad24956921056eaf1e03708',
+196 silly install resolved     bugs: { url: 'https://github.com/chaijs/assertion-error/issues' },
+196 silly install resolved     homepage: 'https://github.com/chaijs/assertion-error',
+196 silly install resolved     _id: 'assertion-error@1.0.1',
+196 silly install resolved     _shasum: '35aaeec33097f11f42399ecadf33faccd27f5c4c',
+196 silly install resolved     _from: 'assertion-error@>=1.0.1 <2.0.0',
+196 silly install resolved     _npmVersion: '1.4.28',
+196 silly install resolved     _npmUser: { name: 'jakeluer', email: 'jake@alogicalparadox.com' },
+196 silly install resolved     maintainers: [ [Object] ],
+196 silly install resolved     dist:
+196 silly install resolved      { shasum: '35aaeec33097f11f42399ecadf33faccd27f5c4c',
+196 silly install resolved        tarball: 'http://registry.npmjs.org/assertion-error/-/assertion-error-1.0.1.tgz' },
+196 silly install resolved     directories: {},
+196 silly install resolved     _resolved: 'https://registry.npmjs.org/assertion-error/-/assertion-error-1.0.1.tgz',
+196 silly install resolved     readme: 'ERROR: No README data found!' } ]
+197 info install type-detect@1.0.0 into /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+198 info install deep-eql@0.1.3 into /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+199 info install assertion-error@1.0.1 into /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+200 info installOne type-detect@1.0.0
+201 verbose installOne of type-detect to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai not in flight; installing
+202 info installOne deep-eql@0.1.3
+203 verbose installOne of deep-eql to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai not in flight; installing
+204 info installOne assertion-error@1.0.1
+205 verbose installOne of assertion-error to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai not in flight; installing
+206 verbose lock using /Users/michaelgu/.npm/_locks/type-detect-02713cb655c158ce.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+207 verbose lock using /Users/michaelgu/.npm/_locks/deep-eql-afba63a9a9b142c5.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+208 verbose lock using /Users/michaelgu/.npm/_locks/assertion-error-a875832e2ed931cf.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+209 silly install write writing type-detect 1.0.0 to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+210 silly install write writing deep-eql 0.1.3 to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+211 silly install write writing assertion-error 1.0.1 to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+212 verbose unbuild node_modules/chai/node_modules/type-detect
+213 verbose unbuild node_modules/chai/node_modules/deep-eql
+214 verbose unbuild node_modules/chai/node_modules/assertion-error
+215 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect is being purged from base /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+216 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+217 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql is being purged from base /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+218 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+219 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error is being purged from base /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+220 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+221 verbose tar unpack /Users/michaelgu/.npm/type-detect/1.0.0/package.tgz
+222 verbose tar unpacking to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+223 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect is being purged
+224 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+225 verbose tar unpack /Users/michaelgu/.npm/deep-eql/0.1.3/package.tgz
+226 verbose tar unpacking to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+227 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql is being purged
+228 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+229 verbose tar unpack /Users/michaelgu/.npm/assertion-error/1.0.1/package.tgz
+230 verbose tar unpacking to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+231 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error is being purged
+232 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+233 silly gunzTarPerm modes [ '755', '644' ]
+234 silly gunzTarPerm modes [ '755', '644' ]
+235 silly gunzTarPerm modes [ '755', '644' ]
+236 silly gunzTarPerm extractEntry package.json
+237 silly gunzTarPerm extractEntry package.json
+238 silly gunzTarPerm extractEntry package.json
+239 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+240 silly gunzTarPerm extractEntry .npmignore
+241 silly gunzTarPerm extractEntry README.md
+242 silly gunzTarPerm extractEntry .npmignore
+243 silly gunzTarPerm extractEntry README.md
+244 silly gunzTarPerm extractEntry .npmignore
+245 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+246 silly gunzTarPerm extractEntry README.md
+247 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+248 silly gunzTarPerm extractEntry index.js
+249 silly gunzTarPerm extractEntry karma.conf.js
+250 silly gunzTarPerm extractEntry index.js
+251 silly gunzTarPerm extractEntry History.md
+252 silly gunzTarPerm extractEntry index.js
+253 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+254 silly gunzTarPerm extractEntry History.md
+255 silly gunzTarPerm modified mode [ 'History.md', 436, 420 ]
+256 silly gunzTarPerm extractEntry History.md
+257 silly gunzTarPerm extractEntry lib/eql.js
+258 silly gunzTarPerm extractEntry ReleaseNotes.md
+259 silly gunzTarPerm modified mode [ 'ReleaseNotes.md', 436, 420 ]
+260 silly gunzTarPerm extractEntry lib/type.js
+261 silly gunzTarPerm modified mode [ 'lib/type.js', 436, 420 ]
+262 verbose write writing to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error/package.json
+263 info preinstall assertion-error@1.0.1
+264 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error/package.json
+265 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error/package.json
+266 silly install resolved []
+267 verbose about to build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+268 info build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+269 verbose write writing to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/package.json
+270 info linkStuff assertion-error@1.0.1
+271 silly linkStuff assertion-error@1.0.1 has /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules as its parent node_modules
+272 verbose write writing to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect/package.json
+273 info preinstall deep-eql@0.1.3
+274 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/package.json
+275 info preinstall type-detect@1.0.0
+276 verbose linkBins assertion-error@1.0.1
+277 verbose linkMans assertion-error@1.0.1
+278 verbose rebuildBundles assertion-error@1.0.1
+279 silly prepareForInstallMany adding type-detect@0.1.1 from deep-eql dependencies
+280 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/package.json
+281 info install assertion-error@1.0.1
+282 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect/package.json
+283 info postinstall assertion-error@1.0.1
+284 verbose unlock done using /Users/michaelgu/.npm/_locks/assertion-error-a875832e2ed931cf.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/assertion-error
+285 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect/package.json
+286 silly cache add args [ 'type-detect@0.1.1', null ]
+287 verbose cache add spec type-detect@0.1.1
+288 silly cache add parsed spec { raw: 'type-detect@0.1.1',
+288 silly cache add   scope: null,
+288 silly cache add   name: 'type-detect',
+288 silly cache add   rawSpec: '0.1.1',
+288 silly cache add   spec: '0.1.1',
+288 silly cache add   type: 'version' }
+289 silly addNamed type-detect@0.1.1
+290 verbose addNamed "0.1.1" is a plain semver version for type-detect
+291 silly mapToRegistry name type-detect
+292 silly mapToRegistry using default registry
+293 silly mapToRegistry registry https://registry.npmjs.org/
+294 silly mapToRegistry uri https://registry.npmjs.org/type-detect
+295 verbose addNameVersion registry:https://registry.npmjs.org/type-detect not in flight; fetching
+296 silly install resolved []
+297 verbose about to build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+298 info build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+299 verbose get https://registry.npmjs.org/type-detect not expired, no request
+300 info linkStuff type-detect@1.0.0
+301 silly linkStuff type-detect@1.0.0 has /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules as its parent node_modules
+302 silly cache afterAdd type-detect@0.1.1
+303 verbose afterAdd /Users/michaelgu/.npm/type-detect/0.1.1/package/package.json not in flight; writing
+304 verbose linkBins type-detect@1.0.0
+305 verbose linkMans type-detect@1.0.0
+306 verbose rebuildBundles type-detect@1.0.0
+307 info install type-detect@1.0.0
+308 verbose afterAdd /Users/michaelgu/.npm/type-detect/0.1.1/package/package.json written
+309 silly install resolved [ { name: 'type-detect',
+309 silly install resolved     version: '0.1.1',
+309 silly install resolved     description: 'Improved typeof detection for node.js and the browser.',
+309 silly install resolved     author:
+309 silly install resolved      { name: 'Jake Luer',
+309 silly install resolved        email: 'jake@alogicalparadox.com',
+309 silly install resolved        url: 'http://alogicalparadox.com' },
+309 silly install resolved     license: 'MIT',
+309 silly install resolved     keywords: [],
+309 silly install resolved     repository:
+309 silly install resolved      { type: 'git',
+309 silly install resolved        url: 'git+ssh://git@github.com/chaijs/type-detect.git' },
+309 silly install resolved     engines: { node: '*' },
+309 silly install resolved     main: './index',
+309 silly install resolved     scripts: { test: 'make test' },
+309 silly install resolved     dependencies: {},
+309 silly install resolved     devDependencies:
+309 silly install resolved      { component: '*',
+309 silly install resolved        coveralls: '2.0.16',
+309 silly install resolved        jscoverage: '0.3.7',
+309 silly install resolved        mocha: '*',
+309 silly install resolved        'mocha-lcov-reporter': '0.0.1',
+309 silly install resolved        'mocha-phantomjs': '*',
+309 silly install resolved        'simple-assert': '*' },
+309 silly install resolved     bugs: { url: 'https://github.com/chaijs/type-detect/issues' },
+309 silly install resolved     _id: 'type-detect@0.1.1',
+309 silly install resolved     dist:
+309 silly install resolved      { shasum: '0ba5ec2a885640e470ea4e8505971900dac58822',
+309 silly install resolved        tarball: 'http://registry.npmjs.org/type-detect/-/type-detect-0.1.1.tgz' },
+309 silly install resolved     _from: 'type-detect@0.1.1',
+309 silly install resolved     _npmVersion: '1.3.11',
+309 silly install resolved     _npmUser: { name: 'jakeluer', email: 'jake@alogicalparadox.com' },
+309 silly install resolved     maintainers: [ [Object] ],
+309 silly install resolved     directories: {},
+309 silly install resolved     _shasum: '0ba5ec2a885640e470ea4e8505971900dac58822',
+309 silly install resolved     _resolved: 'https://registry.npmjs.org/type-detect/-/type-detect-0.1.1.tgz',
+309 silly install resolved     readme: 'ERROR: No README data found!',
+309 silly install resolved     homepage: 'https://github.com/chaijs/type-detect#readme' } ]
+310 info install type-detect@0.1.1 into /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+311 info installOne type-detect@0.1.1
+312 verbose installOne of type-detect to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql not in flight; installing
+313 info postinstall type-detect@1.0.0
+314 verbose lock using /Users/michaelgu/.npm/_locks/type-detect-00ae6f6b945e7659.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+315 verbose unlock done using /Users/michaelgu/.npm/_locks/type-detect-02713cb655c158ce.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/type-detect
+316 silly install write writing type-detect 0.1.1 to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+317 verbose unbuild node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+318 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect is being purged from base /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+319 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+320 verbose tar unpack /Users/michaelgu/.npm/type-detect/0.1.1/package.tgz
+321 verbose tar unpacking to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+322 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect is being purged
+323 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+324 silly gunzTarPerm modes [ '755', '644' ]
+325 silly gunzTarPerm extractEntry package.json
+326 silly gunzTarPerm extractEntry .npmignore
+327 silly gunzTarPerm extractEntry README.md
+328 silly gunzTarPerm extractEntry index.js
+329 silly gunzTarPerm extractEntry History.md
+330 silly gunzTarPerm extractEntry lib/type.js
+331 verbose write writing to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect/package.json
+332 info preinstall type-detect@0.1.1
+333 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect/package.json
+334 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect/package.json
+335 silly install resolved []
+336 verbose about to build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+337 info build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+338 info linkStuff type-detect@0.1.1
+339 silly linkStuff type-detect@0.1.1 has /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules as its parent node_modules
+340 verbose linkBins type-detect@0.1.1
+341 verbose linkMans type-detect@0.1.1
+342 verbose rebuildBundles type-detect@0.1.1
+343 info install type-detect@0.1.1
+344 info postinstall type-detect@0.1.1
+345 verbose unlock done using /Users/michaelgu/.npm/_locks/type-detect-00ae6f6b945e7659.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql/node_modules/type-detect
+346 verbose about to build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+347 info build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+348 info linkStuff deep-eql@0.1.3
+349 silly linkStuff deep-eql@0.1.3 has /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules as its parent node_modules
+350 verbose linkBins deep-eql@0.1.3
+351 verbose linkMans deep-eql@0.1.3
+352 verbose rebuildBundles deep-eql@0.1.3
+353 verbose rebuildBundles [ 'type-detect' ]
+354 info install deep-eql@0.1.3
+355 info postinstall deep-eql@0.1.3
+356 verbose unlock done using /Users/michaelgu/.npm/_locks/deep-eql-afba63a9a9b142c5.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/node_modules/deep-eql
+357 verbose about to build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+358 info build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+359 info linkStuff chai@3.4.1
+360 silly linkStuff chai@3.4.1 has /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules as its parent node_modules
+361 verbose linkBins chai@3.4.1
+362 verbose linkMans chai@3.4.1
+363 verbose rebuildBundles chai@3.4.1
+364 verbose rebuildBundles [ 'assertion-error', 'deep-eql', 'type-detect' ]
+365 info install chai@3.4.1
+366 info postinstall chai@3.4.1
+367 verbose unlock done using /Users/michaelgu/.npm/_locks/chai-e1a17cb213bc6cf5.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai
+368 verbose validateInstall loading /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/package.json for validation
+369 verbose stack Error: The package chai does not satisfy its siblings' peerDependencies requirements!
+369 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+369 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:267:7
+369 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+369 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+369 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+369 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+369 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+369 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+369 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+369 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+370 verbose cwd /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+371 error Darwin 15.2.0
+372 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "chai"
+373 error node v0.12.7
+374 error npm  v2.11.3
+375 error code EPEERINVALID
+376 error peerinvalid The package chai does not satisfy its siblings' peerDependencies requirements!
+376 error peerinvalid Peer chai-json-schema@1.2.0 wants chai@>= 1.6.1 < 3
+377 verbose exit [ 1, true ]
