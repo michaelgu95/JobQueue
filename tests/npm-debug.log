@@ -1,0 +1,202 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'chai-string' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/package.json
+5 warn package.json JobQueue@0.1.0 No repository field.
+6 warn package.json JobQueue@0.1.0 No license field.
+7 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai/package.json
+8 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-http/package.json
+9 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-json-schema/package.json
+10 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-webdriver/package.json
+11 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/express/package.json
+12 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/kue/package.json
+13 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/mocha/package.json
+14 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/redis/package.json
+15 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/request/package.json
+16 verbose installManyTop reading scoped package data from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/selenium-webdriver/package.json
+17 info package.json chai-json-schema@1.2.0 No license field.
+18 info package.json chai-http@1.0.0 No license field.
+19 info package.json kue@0.6.2 No license field.
+20 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/package.json
+21 silly cache add args [ 'chai-string', null ]
+22 verbose cache add spec chai-string
+23 silly cache add parsed spec { raw: 'chai-string',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'chai-string',
+23 silly cache add   rawSpec: '',
+23 silly cache add   spec: '*',
+23 silly cache add   type: 'range' }
+24 silly addNamed chai-string@*
+25 verbose addNamed "*" is a valid semver range for chai-string
+26 silly addNameRange { name: 'chai-string', range: '*', hasData: false }
+27 silly mapToRegistry name chai-string
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry uri https://registry.npmjs.org/chai-string
+31 verbose addNameRange registry:https://registry.npmjs.org/chai-string not in flight; fetching
+32 verbose request uri https://registry.npmjs.org/chai-string
+33 verbose request no auth needed
+34 info attempt registry request try #1 at 2:20:30 PM
+35 verbose request id 1d77a118e14f1b35
+36 http request GET https://registry.npmjs.org/chai-string
+37 http 200 https://registry.npmjs.org/chai-string
+38 silly get cb [ 200,
+38 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+38 silly get     etag: '"5S50FM1DE6LBVZFA7R5Z2OFOQ"',
+38 silly get     'content-type': 'application/json',
+38 silly get     'cache-control': 'max-age=300',
+38 silly get     'content-length': '10723',
+38 silly get     'accept-ranges': 'bytes',
+38 silly get     date: 'Fri, 29 Jan 2016 19:20:31 GMT',
+38 silly get     via: '1.1 varnish',
+38 silly get     age: '0',
+38 silly get     connection: 'keep-alive',
+38 silly get     'x-served-by': 'cache-jfk1022-JFK',
+38 silly get     'x-cache': 'HIT',
+38 silly get     'x-cache-hits': '1',
+38 silly get     'x-timer': 'S1454095231.598667,VS0,VE86',
+38 silly get     vary: 'Accept' } ]
+39 verbose get saving chai-string to /Users/michaelgu/.npm/registry.npmjs.org/chai-string/.cache.json
+40 silly addNameRange number 2 { name: 'chai-string', range: '*', hasData: true }
+41 silly addNameRange versions [ 'chai-string',
+41 silly addNameRange   [ '1.0.0', '1.1.0', '1.1.1', '1.1.2', '1.1.3', '1.1.4', '1.1.6' ] ]
+42 silly addNamed chai-string@1.1.6
+43 verbose addNamed "1.1.6" is a plain semver version for chai-string
+44 silly mapToRegistry name chai-string
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/chai-string
+48 verbose addRemoteTarball https://registry.npmjs.org/chai-string/-/chai-string-1.1.6.tgz not in flight; adding
+49 verbose addRemoteTarball [ 'https://registry.npmjs.org/chai-string/-/chai-string-1.1.6.tgz',
+49 verbose addRemoteTarball   'ae8a43951e232dc598361b0a82051baccf4efdb6' ]
+50 info retry fetch attempt 1 at 2:20:31 PM
+51 info attempt registry request try #1 at 2:20:31 PM
+52 http fetch GET https://registry.npmjs.org/chai-string/-/chai-string-1.1.6.tgz
+53 http fetch 200 https://registry.npmjs.org/chai-string/-/chai-string-1.1.6.tgz
+54 silly fetchAndShaCheck shasum ae8a43951e232dc598361b0a82051baccf4efdb6
+55 verbose addTmpTarball /var/folders/_k/8g_gqyw95kj8ctn4shxl37zr0000gn/T/npm-52963-d8674af0/registry.npmjs.org/chai-string/-/chai-string-1.1.6.tgz not in flight; adding
+56 verbose addTmpTarball already have metadata; skipping unpack for chai-string@1.1.6
+57 silly cache afterAdd chai-string@1.1.6
+58 verbose afterAdd /Users/michaelgu/.npm/chai-string/1.1.6/package/package.json not in flight; writing
+59 verbose afterAdd /Users/michaelgu/.npm/chai-string/1.1.6/package/package.json written
+60 silly install resolved [ { name: 'chai-string',
+60 silly install resolved     version: '1.1.6',
+60 silly install resolved     keywords: [ 'chai', 'testing', 'string', 'chai-plugin', 'browser' ],
+60 silly install resolved     description: 'strings comparison matchers for chai',
+60 silly install resolved     main: 'chai-string.js',
+60 silly install resolved     scripts: { test: 'make test' },
+60 silly install resolved     repository:
+60 silly install resolved      { type: 'git',
+60 silly install resolved        url: 'git://github.com/onechiporenko/chai-string.git' },
+60 silly install resolved     author:
+60 silly install resolved      { name: 'Oleg Nechiporenko',
+60 silly install resolved        url: 'https://github.com/onechiporenko' },
+60 silly install resolved     license: 'MIT',
+60 silly install resolved     devDependencies: { chai: '>=1.9.1', mocha: '>=1.6.0', nodemon: '>=0.6.23' },
+60 silly install resolved     peerDependencies: { chai: '>=1.9.1' },
+60 silly install resolved     gitHead: '2a34e7e69cbe902d2a04b39fd5e6b65d57134089',
+60 silly install resolved     bugs: { url: 'https://github.com/onechiporenko/chai-string/issues' },
+60 silly install resolved     homepage: 'https://github.com/onechiporenko/chai-string#readme',
+60 silly install resolved     _id: 'chai-string@1.1.6',
+60 silly install resolved     _shasum: 'ae8a43951e232dc598361b0a82051baccf4efdb6',
+60 silly install resolved     _from: 'chai-string@*',
+60 silly install resolved     _npmVersion: '2.11.3',
+60 silly install resolved     _nodeVersion: '0.12.7',
+60 silly install resolved     _npmUser: { name: 'onechiporenko', email: 'onechiporenko@apache.org' },
+60 silly install resolved     dist:
+60 silly install resolved      { shasum: 'ae8a43951e232dc598361b0a82051baccf4efdb6',
+60 silly install resolved        tarball: 'http://registry.npmjs.org/chai-string/-/chai-string-1.1.6.tgz' },
+60 silly install resolved     maintainers: [ [Object] ],
+60 silly install resolved     directories: {},
+60 silly install resolved     _resolved: 'https://registry.npmjs.org/chai-string/-/chai-string-1.1.6.tgz' } ]
+61 info install chai-string@1.1.6 into /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+62 info installOne chai-string@1.1.6
+63 verbose installOne of chai-string to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue not in flight; installing
+64 verbose lock using /Users/michaelgu/.npm/_locks/chai-string-965701672a6947f8.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+65 silly install write writing chai-string 1.1.6 to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+66 verbose unbuild node_modules/chai-string
+67 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string is being purged from base /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue
+68 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+69 verbose tar unpack /Users/michaelgu/.npm/chai-string/1.1.6/package.tgz
+70 verbose tar unpacking to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+71 silly gentlyRm /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string is being purged
+72 verbose gentlyRm don't care about contents; nuking /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+73 silly gunzTarPerm modes [ '755', '644' ]
+74 silly gunzTarPerm extractEntry package.json
+75 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+76 silly gunzTarPerm extractEntry README.md
+77 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+78 silly gunzTarPerm extractEntry LICENSE
+79 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+80 silly gunzTarPerm extractEntry chai-string.js
+81 silly gunzTarPerm modified mode [ 'chai-string.js', 438, 420 ]
+82 silly gunzTarPerm extractEntry .idea/.name
+83 silly gunzTarPerm modified mode [ '.idea/.name', 438, 420 ]
+84 silly gunzTarPerm extractEntry .idea/chai-string.iml
+85 silly gunzTarPerm modified mode [ '.idea/chai-string.iml', 438, 420 ]
+86 silly gunzTarPerm extractEntry .idea/encodings.xml
+87 silly gunzTarPerm modified mode [ '.idea/encodings.xml', 438, 420 ]
+88 silly gunzTarPerm extractEntry .idea/inspectionProfiles/Project_Default.xml
+89 silly gunzTarPerm modified mode [ '.idea/inspectionProfiles/Project_Default.xml', 438, 420 ]
+90 silly gunzTarPerm extractEntry .idea/inspectionProfiles/profiles_settings.xml
+91 silly gunzTarPerm modified mode [ '.idea/inspectionProfiles/profiles_settings.xml', 438, 420 ]
+92 silly gunzTarPerm extractEntry .idea/misc.xml
+93 silly gunzTarPerm modified mode [ '.idea/misc.xml', 438, 420 ]
+94 silly gunzTarPerm extractEntry .idea/modules.xml
+95 silly gunzTarPerm modified mode [ '.idea/modules.xml', 438, 420 ]
+96 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+97 silly gunzTarPerm modified mode [ '.idea/scopes/scope_settings.xml', 438, 420 ]
+98 silly gunzTarPerm extractEntry .idea/vcs.xml
+99 silly gunzTarPerm modified mode [ '.idea/vcs.xml', 438, 420 ]
+100 silly gunzTarPerm extractEntry .idea/workspace.xml
+101 silly gunzTarPerm modified mode [ '.idea/workspace.xml', 438, 420 ]
+102 silly gunzTarPerm extractEntry .travis.yml
+103 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+104 silly gunzTarPerm extractEntry Makefile
+105 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+106 silly gunzTarPerm extractEntry test/test.js
+107 silly gunzTarPerm modified mode [ 'test/test.js', 438, 420 ]
+108 silly gunzTarPerm extractEntry test/index.html
+109 silly gunzTarPerm modified mode [ 'test/index.html', 438, 420 ]
+110 verbose write writing to /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string/package.json
+111 info preinstall chai-string@1.1.6
+112 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string/package.json
+113 verbose readDependencies loading dependencies from /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string/package.json
+114 silly install resolved []
+115 verbose about to build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+116 info build /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+117 info linkStuff chai-string@1.1.6
+118 silly linkStuff chai-string@1.1.6 has /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules as its parent node_modules
+119 verbose linkBins chai-string@1.1.6
+120 verbose linkMans chai-string@1.1.6
+121 verbose rebuildBundles chai-string@1.1.6
+122 info install chai-string@1.1.6
+123 info postinstall chai-string@1.1.6
+124 verbose unlock done using /Users/michaelgu/.npm/_locks/chai-string-965701672a6947f8.lock for /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/node_modules/chai-string
+125 verbose validateInstall loading /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/package.json for validation
+126 verbose stack Error: The package chai does not satisfy its siblings' peerDependencies requirements!
+126 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+126 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:267:7
+126 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+126 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+126 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+126 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+126 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+126 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+126 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+126 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+127 verbose cwd /Users/michaelgu/Desktop/Technical Interviews/Medium-JobQueue/tests
+128 error Darwin 15.2.0
+129 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "chai-string"
+130 error node v0.12.7
+131 error npm  v2.11.3
+132 error code EPEERINVALID
+133 error peerinvalid The package chai does not satisfy its siblings' peerDependencies requirements!
+133 error peerinvalid Peer chai-string@1.1.6 wants chai@>=1.9.1
+133 error peerinvalid Peer chai-json-schema@1.2.0 wants chai@>= 1.6.1 < 3
+133 error peerinvalid Peer chai-webdriver@1.1.1 wants chai@>= 1 < 3
+134 verbose exit [ 1, true ]

@@ -1,5 +1,6 @@
 process.env.NODE_ENV = 'test';
 var chai = require('chai');
+chai.use(require('chai-string'));
 var expect = chai.expect;
 var server = require('../index.js');
 var request = require('request');
@@ -14,7 +15,9 @@ describe('JobQueue', function() {
 			var id = json.id;
 			var requestURL = 'http://localhost:3000/?id=' + id;
 			request.get(requestURL, function(err, res, b){
-				expect(JSON.parse(b)).to.have.key('html');
+				json = JSON.parse(b);
+				expect(json).to.have.key('html');
+				expect(json.html).to.match(/(.*?)html>(.*?)/);
 				done();
 			});
 		})
@@ -27,7 +30,9 @@ describe('JobQueue', function() {
 			var id = json.id;
 			var requestURL = 'http://localhost:3000/?id=' + id;
 			request.get(requestURL, function(err, res, b){
-				expect(JSON.parse(b)).to.have.key('html');
+				json = JSON.parse(b);
+				expect(json).to.have.key('html');
+				expect(json.html).to.match(/(.*?)html>(.*?)/);
 				done();
 			});
 		})
@@ -40,7 +45,24 @@ describe('JobQueue', function() {
 			var id = json.id;
 			var requestURL = 'http://localhost:3000/?id=' + id;
 			request.get(requestURL, function(err, res, b){
-				expect(JSON.parse(b)).to.have.key('html');
+				json = JSON.parse(b);
+				expect(json).to.have.key('html');
+				expect(json.html).to.match(/(.*?)html>(.*?)/);
+				done();
+			});
+		})
+	})
+
+	it('should return a job id after GET w/ url without quotes', function(done){
+		request.get('http://localhost:3000/?url=https://www.foo.com/?a=b', function(err, res, body){
+			var json = JSON.parse(body)
+			expect(json).to.have.key('id');
+			var id = json.id;
+			var requestURL = 'http://localhost:3000/?id=' + id;
+			request.get(requestURL, function(err, res, b){
+				json = JSON.parse(b);
+				expect(json).to.have.key('html');
+				expect(json.html).to.match(/(.*?)html>(.*?)/);
 				done();
 			});
 		})
