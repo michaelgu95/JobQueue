@@ -5,7 +5,10 @@ var express = require('express'),
 var redis = require('redis'),
 	client = redis.createClient();
 var request = require('request');
+var bodyParser = require('body-parser');
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 var port = process.env.PORT || 3000;
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
@@ -18,11 +21,9 @@ if(!module.parent){
 }
 
 app.get('/', function(req, res){
-	//if user GETs with an id
 	if(req.param('id')){
 		var id = req.param('id');
 		console.log('User requests data with id: ' + id);
-
 		//check if errors occurred in processing job
 		client.hget("errors", id, function(err, value){
 			if(err){
@@ -45,9 +46,12 @@ app.get('/', function(req, res){
 				res.send('Error occurred: ' + value + '\n');
 			}
 		})
-	//otherwise, create new job
-	}else if(req.param('url')){
-		var url = req.param('url');
+	}
+})
+
+app.post('/', function(req, res){
+	if(req.body.url){
+		var url = req.body.url;
 		newJob(res, url);
 	}
 })
