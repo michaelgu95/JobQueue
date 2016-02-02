@@ -15,8 +15,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 //ensure tests that require app don't listen twice
 if(!module.parent){
 	app.listen(port, function(err) {
-    if(err) throw err;        
-    console.log('Express server running on localhost:%d', port);
+	    if(err) throw err;        
+	    console.log('Express server running on localhost:%d', port);
 	});
 }
 
@@ -45,16 +45,16 @@ app.get('/', function(req, res){
 			}else{
 				res.send('Error occurred: ' + value + '\n');
 			}
-		})
+		});
 	}
-})
+});
 
 app.post('/', function(req, res){
 	if(req.body.url){
 		var url = req.body.url;
 		newJob(res, url);
 	}
-})
+});
 
 function newJob(res, url){
 	var job = queue.create('job', {
@@ -78,9 +78,36 @@ queue.process('job', function (job, done){
 	console.log('Job ' + job.id + ' is processsing...');
 	var url = job.data.url.replace( /['"]/g, "" );
 	console.log(url);
-	request.get({
+
+	//first make HEAD request to weed out large files(1 TB)
+	var maxSize = Math.pow(10, 12); 
+	var exceeded = false;
+	request({
 		url: url,
-		timeout: 10000 	//add timeout if file too large
+		method: "HEAD"
+	}, function(err, head){
+		if(!err){
+			var size = head.headers['content-length'];
+			if(size > maxSize){
+				client.hset("errors", job.id, "Resource requested from URL exceeded maximum file size of 1 TB", function(err){
+					done();
+				});
+				exceeded = true;
+			}else{
+				//content-length didn't exceed max -> start request
+				scrapeURL(url, maxSize, job, done);
+			}
+		}else{
+			//no header -> go ahead and start the request
+			scrapeURL(url, maxSize, job, done);
+		}	
+	});
+});
+
+function scrapeURL(url, maxSize, job, done){
+	//start request
+	var req = request({
+		url: url
 	}, function(error, response, body){
 		if(error){
 			client.hset("errors", job.id, error.code, function(err){
@@ -92,4 +119,16 @@ queue.process('job', function (job, done){
 			});
 		}
 	});
-})
+	//continue to track incoming file size, in case header was wrong about size
+	var size = 0;
+	req.on('data', function(data){
+		size += data.length;
+		if(size > maxSize){
+			console.log('Resource requested from URL exceeded maximum file size of 1 TB')
+			client.hset("errors", job.id, "Resource requested from URL exceeded maximum file size of 1 TB", function(err){
+				done();
+			});
+			req.abort();
+		}
+	});
+}
