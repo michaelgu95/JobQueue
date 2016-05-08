@@ -9,7 +9,7 @@ Job Queue that fetches HTML requests from a specified url
 4. POST call to API with url to scrape(ex:google)
     - note the job id returned from call
 5. Run another cURL command using the job id from first call: 
-    `$ curl -i -X  GET 'http://localhost:3000/?id=(insert job id here)'`
+        `$ curl -i -X  GET 'http://localhost:3000/?id=(insert job id here)'`
 
 
 
